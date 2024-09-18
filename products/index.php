@@ -59,7 +59,7 @@ $APPLICATION->SetTitle("Все изделия мзф Сроки изготовл
         <h2 class="portfolio-title">Portfolio</h2>
         <div class="portfolio_box">
             <div class="portfolio__item">
-                <a href=" " target="_blank">
+                <a href="http://test.zerkala.ru/portfolio/bathroom" target="_blank">
                     <div class="catalog__item-img ">
                         <img src="/upload/iblock/d2e/umwn2d1wem83h682yp3gyeseshoc41f4.jpg" alt="Стекло" title="Стекло">
                     </div>
