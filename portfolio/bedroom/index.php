@@ -8,7 +8,6 @@ $APPLICATION->SetTitle("Все изделия мзф Сроки изготовл
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        row-gap: 30px;
     }
 
     .portfolio__item {
@@ -20,7 +19,7 @@ $APPLICATION->SetTitle("Все изделия мзф Сроки изготовл
     }
 
     .portfolio-title {
-        margin: 50px 0 30px;
+        margin-bottom: 30px;
         color: #051A47;
     }
 
@@ -131,67 +130,36 @@ $APPLICATION->SetTitle("Все изделия мзф Сроки изготовл
 </style>
 <section>
     <div class="container">
-        <h2 class="portfolio-title">Варианты ванных</h2>
+        <h2 class="portfolio-title">Варианты спален</h2>
         <div class="portfolio_box">
             <div class="portfolio__item">
-                <a href="http://test.zerkala.ru/portfolio/bathroom/collection/collection-1.php" target="">
+                <a href="http://test.zerkala.ru/portfolio/bedroom/collection/collection-1.php" target="">
                     <div class="catalog__item-img ">
-                        <img alt="photo_2024-09-17_15-19-48.jpg" src="/upload/medialibrary/11a/4cneyc0tfo2e9gc6h4z81ir0krcu3tzc/photo_2024_09_17_15_19_48.jpg" title="photo_2024-09-17_15-19-48.jpg"><br>
+                        <img src="/upload/iblock/d2e/umwn2d1wem83h682yp3gyeseshoc41f4.jpg" alt="Стекло" title="Стекло">
                     </div>
-                    <h3 class="catalog__item-title">Ванная 1</h3>
+                    <h3 class="catalog__item-title">Спальня 1</h3>
                 </a>
             </div>
             <div class="portfolio__item">
-                <a href="http://test.zerkala.ru/portfolio/bathroom/collection/collection-2.php " target="">
+                <a href="http://test.zerkala.ru/portfolio/bedroom/collection/collection-2.php " target="">
                     <div class="catalog__item-img">
-                        <img alt="photo_2024-09-17_15-24-13.jpg" src="/upload/medialibrary/5b4/hu7rydqawwz05bu282tstti1nuwr7se1/photo_2024_09_17_15_24_13.jpg" title="photo_2024-09-17_15-24-13.jpg"><br>
+                        <img src="/upload/iblock/d2e/umwn2d1wem83h682yp3gyeseshoc41f4.jpg" alt="Стекло" title="Стекло">
                     </div>
-                    <h3 class="catalog__item-title">Ванная 2</h3>
+                    <h3 class="catalog__item-title">Спальня 2</h3>
                 </a>
             </div>
             <div class="portfolio__item">
-                <a href="http://test.zerkala.ru/portfolio/bathroom/collection/collection-3.php " target="">
+                <a href="http://test.zerkala.ru/portfolio/bedroom/collection/collection-3.php " target="">
                     <div class="catalog__item-img">
-                        <img alt="163cef372cde39697c09d2d04fa484ad.jpg" src="/upload/medialibrary/fa7/ci5m8k79hsqjj0t4ynez9yijtatea7ly/163cef372cde39697c09d2d04fa484ad.jpg" title="163cef372cde39697c09d2d04fa484ad.jpg"><br>
+                        <img src="/upload/iblock/d2e/umwn2d1wem83h682yp3gyeseshoc41f4.jpg" alt="Стекло" title="Стекло">
                     </div>
-                    <h3 class="catalog__item-title">Ванная 3</h3>
-                </a>
-            </div>
-            <div class="portfolio__item">
-                <a href="http://test.zerkala.ru/portfolio/bathroom/collection/collection-4.php " target="">
-                    <div class="catalog__item-img">
-                        <img alt="b9a8e1c6985991d2679b7aa88fad158d.jpg" src="/upload/medialibrary/eeb/s1t4vvlasszkfeni1phddw01gf5922ku/b9a8e1c6985991d2679b7aa88fad158d.jpg" title="b9a8e1c6985991d2679b7aa88fad158d.jpg"><br>
-                    </div>
-                    <h3 class="catalog__item-title">Ванная 4</h3>
-                </a>
-            </div>
-            <div class="portfolio__item">
-                <a href="http://test.zerkala.ru/portfolio/bathroom/collection/collection-5.php " target="">
-                    <div class="catalog__item-img">
-                        <img alt="photo_2024-09-17_15-19-51.jpg" src="/upload/medialibrary/2bf/y27srl8qv3atakx9hnczf3yssg71ayfn/photo_2024_09_17_15_19_51.jpg" title="photo_2024-09-17_15-19-51.jpg"><br>
-                    </div>
-                    <h3 class="catalog__item-title">Ванная 5</h3>
-                </a>
-            </div>
-            <div class="portfolio__item">
-                <a href="http://test.zerkala.ru/portfolio/bathroom/collection/collection-5.php " target="">
-                    <div class="catalog__item-img">
-                        <img alt="163cef372cde39697c09d2d04fa484ad.jpg" src="/upload/medialibrary/fa7/ci5m8k79hsqjj0t4ynez9yijtatea7ly/163cef372cde39697c09d2d04fa484ad.jpg" title="163cef372cde39697c09d2d04fa484ad.jpg"><br>
-                    </div>
-                    <h3 class="catalog__item-title">Ванная 6</h3>
-                </a>
-            </div>
-            <div class="portfolio__item">
-                <a href="http://test.zerkala.ru/portfolio/bathroom/collection/collection-5.php " target="">
-                    <div class="catalog__item-img">
-                        <img alt="163cef372cde39697c09d2d04fa484ad.jpg" src="/upload/medialibrary/fa7/ci5m8k79hsqjj0t4ynez9yijtatea7ly/163cef372cde39697c09d2d04fa484ad.jpg" title="163cef372cde39697c09d2d04fa484ad.jpg"><br>
-                    </div>
-                    <h3 class="catalog__item-title">Ванная 7</h3>
+                    <h3 class="catalog__item-title">Спальня 3</h3>
                 </a>
             </div>
         </div>
     </div>
 </section>
+
 <section class="ex">
     <div class="ex__bg">
         <img src="/local/templates/zerkala/assets/img/layout/img1.jpg" alt="">
