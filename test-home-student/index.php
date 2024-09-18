@@ -177,6 +177,17 @@ $APPLICATION->SetTitle("Зеркала на заказ в Москве - изг�
     ),
     false
 ); ?>
+<style>
+    .portfolio-title {
+        margin-bottom: 25px;
+    }
+</style>
+<section class="clnt">
+    <div class="container">
+        <h2 class="portfolio-title">НАШЕ ПОРТФОЛИО</h2>
+        <a href="http://test.zerkala.ru/products" class="open-modal bt bt-blue bt-bgg">Смотрите и вдохновляйтесь</a>
+    </div>
+</section>
 <section class="clnt">
     <div class="container">
         <div class="title-main">
