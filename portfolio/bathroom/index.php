@@ -3,9 +3,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetPageProperty("description", "Изготовление зеркал в Москве любой сложности. Изготовление за 1 день! Московская Зеркальная Фабрика на Нагорной, 17. Звоните: +7 (495) 797-53-73 Московская Зеркальная Фабрика крупнейший производитель зеркал. Выполняем художественную обработку, витраж, состаренные зеркала, изготовление разноцветных зеркал, оформление в багет и другие");
 $APPLICATION->SetPageProperty("title", "Все изделия мзф");
 $APPLICATION->SetTitle("Все изделия мзф Сроки изготовления зеркал в Москве. МЗФ на Нагорной 17. 100% гарантия качества. Звоните: +7 (495) 797-53-73.");
-?>
-
-<style>
+?><style>
     .portfolio_box {
         display: flex;
         flex-wrap: wrap;
@@ -34,6 +32,7 @@ $APPLICATION->SetTitle("Все изделия мзф Сроки изготовл
     .text-area-portfolio {
         width: 50%;
         margin-left: auto;
+        font-size: 16px;
     }
 
 
@@ -54,7 +53,7 @@ $APPLICATION->SetTitle("Все изделия мзф Сроки изготовл
         border: solid 1px #357ebd;
         border-radius: 3px;
         outline: none;
-        background: #428bca;
+        background: #051A47;
         cursor: pointer;
         transition: all 0.2s;
     }
@@ -68,10 +67,10 @@ $APPLICATION->SetTitle("Все изделия мзф Сроки изготовл
         cursor: pointer;
     }
 
+    .viewport-box {
+        width: 40%;
+    }
 
-    .viewport {}
-
-    .content-box {}
 
     .thumbs {
         overflow: auto;
@@ -96,62 +95,83 @@ $APPLICATION->SetTitle("Все изделия мзф Сроки изготовл
         justify-content: space-between;
     }
 
+    .discription-portfolio {
+        font-size: 18px;
+    }
+
     .none {
         display: none;
     }
+
+    @media(max-width: 900px) {
+        .portfolio-gallery-container {
+            flex-direction: column;
+        }
+
+        .text-area-portfolio,
+        .viewport-box {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .viewport-box {
+            order: -2;
+        }
+
+        .thumbs {
+            flex-direction: row;
+        }
+
+        .viewport {
+            order: -1;
+        }
+    }
 </style>
-
-
 <section>
     <div class="container">
         <div class="wrap">
             <h2 class="portfolio-title">Ванная комната</h2>
-            <div class="flex" data-gallery>
+            <div class="flex" data-gallery="">
                 <div class="container portfolio-gallery-container">
                     <div class="viewport">
                         <div class="thumbs content-box">
-                            <img src="/upload/iblock/d2e/umwn2d1wem83h682yp3gyeseshoc41f4.jpg">
-                            <img src="/upload/iblock/c97/qotxlsqkctoy98ualjwb3s9kgsmhejm0.jpg">
-                            <img src="/upload/iblock/147/wlzjso1gc8ru9s69bzlzyj6ffeo87xp5.jpg">
-                            <img src="/upload/iblock/115/1hlc0a1l1ampp80870l23fxlxkpe3xsp.jpg">
-                            <img src="/upload/iblock/d2e/umwn2d1wem83h682yp3gyeseshoc41f4.jpg">
+                            <img alt="photo_2024-09-17_15-19-49.jpg" src="/upload/medialibrary/48c/3zgd9go3grhr68p3kbo591n7st7stan6/photo_2024_09_17_15_19_49.jpg" title="photo_2024-09-17_15-19-49.jpg"><br>
+                            <img alt="photo_2024-09-17_15-19-48.jpg" src="/upload/medialibrary/11a/4cneyc0tfo2e9gc6h4z81ir0krcu3tzc/photo_2024_09_17_15_19_48.jpg" title="photo_2024-09-17_15-19-48.jpg"><br>
+                            <img alt="photo_2024-09-17_15-19-50 (2).jpg" src="/upload/medialibrary/276/f073q9gfw3qf240tyy0wx48lkycpguux/photo_2024_09_17_15_19_50-_2_.jpg" title="photo_2024-09-17_15-19-50 (2).jpg"><br>
+                            <img alt="photo_2024-09-17_15-19-50.jpg" src="/upload/medialibrary/c48/dceaf0gdbcqnq1ostfl6gbv3fvlg8x4u/photo_2024_09_17_15_19_50.jpg" title="photo_2024-09-17_15-19-50.jpg"><br>
+                            <img alt="photo_2024-09-17_15-19-51.jpg" src="/upload/medialibrary/2bf/y27srl8qv3atakx9hnczf3yssg71ayfn/photo_2024_09_17_15_19_51.jpg" title="photo_2024-09-17_15-19-51.jpg"><br>
                         </div>
                     </div>
-
-                    <div>
+                    <div class="viewport-box">
                         <div class="photo-box">
-                            <img src="/upload/iblock/d2e/umwn2d1wem83h682yp3gyeseshoc41f4.jpg">
+                            <img alt="photo_2024-09-17_15-19-49.jpg" src="/upload/medialibrary/48c/3zgd9go3grhr68p3kbo591n7st7stan6/photo_2024_09_17_15_19_49.jpg" title="photo_2024-09-17_15-19-49.jpg">
                         </div>
-
                         <div class="control-row">
-                            <button type="button" class="btn none" data-control="first">Первое</button>
-                            <button type="button" class="btn" data-control="prev">
-                                < </button>
-                                    <button type="button" class="btn" data-control="next">></button>
-                                    <button type="button" class="btn none" data-control="last">Последнее</button>
+                            <button type="button" class="btn none" data-control="first">Первое</button> <button type="button" class="btn" data-control="prev">
+                                &lt; </button> <button type="button" class="btn" data-control="next">&gt;</button> <button type="button" class="btn none" data-control="last">Последнее</button>
                         </div>
                     </div>
                     <div class="text-area-portfolio">
-                        <h4>Установка зеркала с подсветкой в спальне — это отличный способ создать атмосферу уюта и стиля. Современные зеркала, оборудованные встроенной подсветкой, не только выполняют свою основную функцию, но и становятся важным элементом дизайна интерьера.
-
-                            При выборе подходящего места для зеркала следует учитывать, что оно должно хорошо освещаться и быть на уровне глаз. Оптимальным вариантом будет расположить зеркало над туалетным столиком или в зоне, где вы утром собираетесь. Подсветка может быть как холодной, так и теплой, что позволит создать необходимую атмосферу — от бодрящего утра до расслабляющего вечера.
-
-                            Во время установки необходимо продумать способ монтажа: зеркала можно прикрепить на стену с помощью кронштейнов или выбрать вариант с навешиванием. Выбор материалов также играет значительную роль: лучше отдать предпочтение влагостойкому стеклу, особенно если в спальне присутствует повышенная влажность.
-
-                            Такое зеркало не только визуально расширит пространство, но и станет стильным акцентом, который придаст спальне индивидуальность и шарм.
-
-
-
-                            Звоните, мы ответим на ваши вопросы!
-                            Московская Зеркальная Фабрика
-                            Нагорная, 17</h4>
+                        <h4 class="discription-portfolio">
+                            Установка зеркала с подсветкой в ванной — это отличный способ создать атмосферу уюта и стиля.
+                            Современные зеркала, оборудованные встроенной подсветкой, не только выполняют свою основную функцию, но и становятся важным элементом дизайна интерьера.
+                            При выборе подходящего места для зеркала следует учитывать, что оно должно хорошо освещаться и быть на уровне глаз.
+                            <br><br>
+                            Оптимальным вариантом будет расположить зеркало над туалетным столиком или в зоне, где вы утром собираетесь.
+                            Подсветка может быть как холодной, так и теплой, что позволит создать необходимую атмосферу — от бодрящего утра до расслабляющего вечера.
+                            Во время установки необходимо продумать способ монтажа: зеркала можно прикрепить на стену с помощью кронштейнов или выбрать вариант с навешиванием.
+                            <br><br>
+                            Выбор материалов также играет значительную роль: лучше отдать предпочтение влагостойкому стеклу, особенно если в спальне присутствует повышенная влажность.
+                            Такое зеркало не только визуально расширит пространство, но и станет стильным акцентом, который придаст спальне индивидуальность и шарм. Звоните, мы ответим на ваши вопросы!
+                        </h4>
+                        Московская Зеркальная Фабрика<br> Нагорная, 17
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
 <script>
     (function() {
         'use strict';
@@ -229,23 +249,19 @@ $APPLICATION->SetTitle("Все изделия мзф Сроки изготовл
         }
     })();
 </script>
-
-
 <section class="ex">
     <div class="ex__bg">
-        <img src="<?= SITE_TEMPLATE_PATH ?>/assets/img/layout/img1.jpg" alt="">
+        <img src="/local/templates/zerkala/assets/img/layout/img1.jpg" alt="">
     </div>
     <div class="container">
         <div class="ex__inner">
             <div class="ex__l">
                 <h2>эксклюзивный дизайн зеркал</h2>
-                <h4 style="max-width: 607px;margin: 1em 0;font-size: 20px;font-weight: 400;">У вас есть полная свобода выбора: размер, форма, стиль оправы, покрытие — все зависит от ваших предпочтений и потребностей. Наша команда опытных мастеров с радостью поможет вам воплотить идеи, которые идеально подойдут под вашу комнату или офис. </h4>
+                <h4 style="max-width: 607px;margin: 1em 0;font-size: 20px;font-weight: 400;">У&nbsp;вас&nbsp;есть&nbsp;полная свобода выбора: размер, форма, стиль оправы, покрытие&nbsp;— все&nbsp;зависит от&nbsp;ваших предпочтений и&nbsp;потребностей. Наша команда опытных мастеров с&nbsp;радостью поможет вам&nbsp;воплотить идеи, которые идеально подойдут под&nbsp;вашу комнату или&nbsp;офис. </h4>
                 <div class="ex__btn">
-                    <a href="https://nagornaya17.ru/zerkala/" class="bt bt-blue bt-bgg" target="_blank">ИНТЕРНЕТ-МАГАЗИН</a>
-                    <a href="/zerkala-na-zakaz/" class="bt bt-wh bt-bgg">ЗЕРКАЛА НА ЗАКАЗ</a>
+                    <a href="https://nagornaya17.ru/zerkala/" class="bt bt-blue bt-bgg" target="_blank">ИНТЕРНЕТ-МАГАЗИН</a> <a href="/zerkala-na-zakaz/" class="bt bt-wh bt-bgg">ЗЕРКАЛА НА ЗАКАЗ</a>
                 </div>
             </div>
         </div>
     </div>
-</section>
-<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
+</section> <br><? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
