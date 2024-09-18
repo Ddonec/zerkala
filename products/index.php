@@ -1,39 +1,94 @@
 <?
-require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetPageProperty("description", "Изготовление зеркал в Москве любой сложности. Изготовление за 1 день! Московская Зеркальная Фабрика на Нагорной, 17. Звоните: +7 (495) 797-53-73 Московская Зеркальная Фабрика крупнейший производитель зеркал. Выполняем художественную обработку, витраж, состаренные зеркала, изготовление разноцветных зеркал, оформление в багет и другие");
 $APPLICATION->SetPageProperty("title", "Все изделия мзф");
 $APPLICATION->SetTitle("Все изделия мзф Сроки изготовления зеркал в Москве. МЗФ на Нагорной 17. 100% гарантия качества. Звоните: +7 (495) 797-53-73.");
 ?>
 
-    <section class="banner banner_tw">
-        <div class="banner__video">
-            <video id="videoMain" loop autoplay="autoplay" playsinline muted="muted" poster="">
-                <source id="videoMainSource"  src="<?= CFile::GetPath($GLOBALS["VIDEOS"]["PRODUCTS"]) ?>" type="video/mp4">
-            </video>
-        </div>
-        <div class="container">
-            <div class="banner__inner">
-                <?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "main", Array(
-                    "PATH" => "",	// Путь, для которого будет построена навигационная цепочка (по умолчанию, текущий путь)
-                    "SITE_ID" => "s1",	// Cайт (устанавливается в случае многосайтовой версии, когда DOCUMENT_ROOT у сайтов разный)
-                    "START_FROM" => "0",	// Номер пункта, начиная с которого будет построена навигационная цепочка
+<style>
+    .portfolio_box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .portfolio__item {
+        width: calc(33% - 30px);
+    }
+
+    .portfolio__item:hover img {
+        scale: 1.1;
+    }
+
+    .portfolio-title {
+        margin-bottom: 30px;
+        color: #051A47;
+    }
+</style>
+
+<section class="banner banner_tw">
+    <div class="banner__video">
+        <video id="videoMain" loop autoplay="autoplay" playsinline muted="muted" poster="">
+            <source id="videoMainSource" src="<?= CFile::GetPath($GLOBALS["VIDEOS"]["PRODUCTS"]) ?>" type="video/mp4">
+        </video>
+    </div>
+    <div class="container">
+        <div class="banner__inner">
+            <? $APPLICATION->IncludeComponent(
+                "bitrix:breadcrumb",
+                "main",
+                array(
+                    "PATH" => "",    // Путь, для которого будет построена навигационная цепочка (по умолчанию, текущий путь)
+                    "SITE_ID" => "s1",    // Cайт (устанавливается в случае многосайтовой версии, когда DOCUMENT_ROOT у сайтов разный)
+                    "START_FROM" => "0",    // Номер пункта, начиная с которого будет построена навигационная цепочка
                 ),
-                    false
-                );?>
-                <div class="banner__bottom" >
-                    <h1><?= $APPLICATION->ShowTitle() ?></h1>
-                    <div class="banner__btn">
-                        <a href="#zprsPrice" class="open-modal bt bt-blue bt-bgg">ЗАКАЗАТЬ ЗВОНОК</a>
-                        <a href="#ordPrice" class="open-modal bt bt-wh bt-bgg">ЗАЯВКА НА РАСЧЁТ</a>
-                    </div>
+                false
+            ); ?>
+            <div class="banner__bottom">
+                <h1><?= $APPLICATION->ShowTitle() ?></h1>
+                <div class="banner__btn">
+                    <a href="#zprsPrice" class="open-modal bt bt-blue bt-bgg">ЗАКАЗАТЬ ЗВОНОК</a>
+                    <a href="#ordPrice" class="open-modal bt bt-wh bt-bgg">ЗАЯВКА НА РАСЧЁТ</a>
                 </div>
             </div>
         </div>
-    </section>
-<?$APPLICATION->IncludeComponent(
+    </div>
+</section>
+<section>
+    <div class="container">
+        <h2 class="portfolio-title">Portfolio</h2>
+        <div class="portfolio_box">
+            <div class="portfolio__item">
+                <a href=" " target="_blank">
+                    <div class="catalog__item-img ">
+                        <img src="/upload/iblock/d2e/umwn2d1wem83h682yp3gyeseshoc41f4.jpg" alt="Стекло" title="Стекло">
+                    </div>
+                    <h3 class="catalog__item-title">Ванная</h3>
+                </a>
+            </div>
+            <div class="portfolio__item">
+                <a href=" " target="_blank">
+                    <div class="catalog__item-img">
+                        <img src="/upload/iblock/d2e/umwn2d1wem83h682yp3gyeseshoc41f4.jpg" alt="Стекло" title="Стекло">
+                    </div>
+                    <h3 class="catalog__item-title">Спальня</h3>
+                </a>
+            </div>
+            <div class="portfolio__item">
+                <a href=" " target="_blank">
+                    <div class="catalog__item-img">
+                        <img src="/upload/iblock/d2e/umwn2d1wem83h682yp3gyeseshoc41f4.jpg" alt="Стекло" title="Стекло">
+                    </div>
+                    <h3 class="catalog__item-title">С подсветкой</h3>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<? $APPLICATION->IncludeComponent(
     "bitrix:news.list",
     "products_catalog",
-    Array(
+    array(
         "ACTIVE_DATE_FORMAT" => "d.m.Y",
         "ADD_SECTIONS_CHAIN" => "N",
         "AJAX_MODE" => "N",
@@ -53,7 +108,7 @@ $APPLICATION->SetTitle("Все изделия мзф Сроки изготовл
         "DISPLAY_PICTURE" => "N",
         "DISPLAY_PREVIEW_TEXT" => "N",
         "DISPLAY_TOP_PAGER" => "N",
-        "FIELD_CODE" => array("NAME","PREVIEW_PICTURE",""),
+        "FIELD_CODE" => array("NAME", "PREVIEW_PICTURE", ""),
         "FILTER_NAME" => "",
         "HIDE_LINK_WHEN_NO_DETAIL" => "N",
         "IBLOCK_ID" => "10",
@@ -72,7 +127,7 @@ $APPLICATION->SetTitle("Все изделия мзф Сроки изготовл
         "PARENT_SECTION" => "",
         "PARENT_SECTION_CODE" => "",
         "PREVIEW_TRUNCATE_LEN" => "",
-        "PROPERTY_CODE" => array("LINK",""),
+        "PROPERTY_CODE" => array("LINK", ""),
         "SET_BROWSER_TITLE" => "N",
         "SET_LAST_MODIFIED" => "N",
         "SET_META_DESCRIPTION" => "N",
@@ -86,22 +141,22 @@ $APPLICATION->SetTitle("Все изделия мзф Сроки изготовл
         "SORT_ORDER2" => "ASC",
         "STRICT_SECTION_CHECK" => "N"
     )
-);?>
-    <section class="ex">
-        <div class="ex__bg">
-            <img src="<?= SITE_TEMPLATE_PATH ?>/assets/img/layout/img1.jpg" alt="">
-        </div>
-        <div class="container">
-            <div class="ex__inner">
-                <div class="ex__l">
-                    <h2>эксклюзивный дизайн зеркал</h2>
-                    <h4 style="max-width: 607px;margin: 1em 0;font-size: 20px;font-weight: 400;">У вас есть полная свобода выбора: размер, форма, стиль оправы, покрытие — все зависит от ваших предпочтений и потребностей. Наша команда опытных мастеров с радостью поможет вам воплотить идеи, которые идеально подойдут под вашу комнату или офис. </h4>
-                    <div class="ex__btn">
-                        <a href="https://nagornaya17.ru/zerkala/" class="bt bt-blue bt-bgg" target="_blank">ИНТЕРНЕТ-МАГАЗИН</a>
-                        <a href="/zerkala-na-zakaz/" class="bt bt-wh bt-bgg">ЗЕРКАЛА НА ЗАКАЗ</a>
-                    </div>
+); ?>
+<section class="ex">
+    <div class="ex__bg">
+        <img src="<?= SITE_TEMPLATE_PATH ?>/assets/img/layout/img1.jpg" alt="">
+    </div>
+    <div class="container">
+        <div class="ex__inner">
+            <div class="ex__l">
+                <h2>эксклюзивный дизайн зеркал</h2>
+                <h4 style="max-width: 607px;margin: 1em 0;font-size: 20px;font-weight: 400;">У вас есть полная свобода выбора: размер, форма, стиль оправы, покрытие — все зависит от ваших предпочтений и потребностей. Наша команда опытных мастеров с радостью поможет вам воплотить идеи, которые идеально подойдут под вашу комнату или офис. </h4>
+                <div class="ex__btn">
+                    <a href="https://nagornaya17.ru/zerkala/" class="bt bt-blue bt-bgg" target="_blank">ИНТЕРНЕТ-МАГАЗИН</a>
+                    <a href="/zerkala-na-zakaz/" class="bt bt-wh bt-bgg">ЗЕРКАЛА НА ЗАКАЗ</a>
                 </div>
             </div>
         </div>
-    </section>
-<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+    </div>
+</section>
+<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
