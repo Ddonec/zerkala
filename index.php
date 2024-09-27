@@ -38,19 +38,11 @@ $APPLICATION->SetTitle("Зеркала на заказ в Москве - изг�
                         <a href="/" class="banner__logo">
                             <img src="/local/templates/zerkala/assets/img/svg/logo.svg" alt="">
                         </a> 
-<!--                        <div class="banner__address" onclick="scrollToTarget()"> -->
                         <a class="banner__address" href="#map">
                             <img src="/local/templates/zerkala/assets/img/svg/ic-mp.svg" alt="">
                             <span><?= $GLOBALS["CONTACTS"]["ADDRESS"] ?></span>
                         </a>
                         <h1 style="line-height: 1.4;" class="banner__tx">ПРОИЗВОДСТВО ИЗДЕЛИЙ ИЗ ЗЕРКАЛ С 1961 ГОДА</h1>
-<!--                        <div class="banner__tx" style="
-    background-color: #344e8c82;
-    border-left-width: 100px;
-    padding-left: 100px;
-    padding-right: 100px;
-"> Дорогие клиенты! Вследствие технического сбоя в настоящее время не работает телефония (входящие и исходящие вызовы), <br>а также невозможна отправка форм обратной связи с сайта.  <br>В данный момент мы работаем над восстановлением работоспособности наших сервисов. Благодарим за понимание.</div>
-                    </div> -->
                 </div>
                 <div class="banner__bottom">
                     <div class="banner__timer">
@@ -407,9 +399,6 @@ margin-top: 20px !important;
 	),
 	false
 ); ?>
-<!--                    <div class="swiper-button-prev js-rev-slider-prev"></div>
-                    <div class="swiper-button-next js-rev-slider-next"></div>
-                    <div class="swiper-pagination js-rev-slider-pagination"></div> -->
                 </div>
             </div>
         </div>
